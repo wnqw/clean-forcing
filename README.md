@@ -155,11 +155,14 @@ Videos are on the [project page](https://clean-forcing.github.io/).
 ## Citation
 If our work or code helps you, please consider citing our paper. Thank you!
 ```bibtex
-@article{wang2026cleanforcing,
+@misc{wang2026cleanforcingdriftresistantautoregressive,
   title={Clean Forcing: Drift-Resistant Autoregressive Video Diffusion with a Frozen Base},
-  author={Wang, Wenqing and Shin, Joonghyuk and Tremblay, Jonathan and Song, Chan Hee and Fu, Yun},
-  journal={arXiv preprint},
-  year={2026}
+  author={Wenqing Wang and Joonghyuk Shin and Jonathan Tremblay and Chan Hee Song and Yun Fu},
+  year={2026},
+  eprint={2610.25634},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2610.25634},
 }
 ```
 
