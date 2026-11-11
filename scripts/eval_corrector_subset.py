@@ -38,6 +38,10 @@ def main():
     import pyiqa
     cfg = OmegaConf.merge(OmegaConf.load("configs/default_config.yaml"),
                           OmegaConf.load("configs/_undistilled_smoke.yaml"))
+    # Paper protocol for the adapted 1.3B base: CFG 6 / shift 8 (the yaml's CFG 3 / shift 5 is the Causal-Forcing
+    # protocol). Without this, the released corrector scores ~11 MUSIQ lower than reported. Override with CFG/SHIFT.
+    cfg.guidance_scale = float(os.environ.get("CFG", 6.0))
+    cfg.timestep_shift = float(os.environ.get("SHIFT", 8.0))
     if NFB:
         cfg.num_frame_per_block = NFB
     torch.set_grad_enabled(False)
